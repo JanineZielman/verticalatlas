@@ -1,0 +1,29 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "settings",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "name": [
+      {
+        "type": "heading1",
+        "text": "Primitive",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ex minim est aliqua enim eiusmod laborum sint et pariatur occaecat tempor in incididunt ut. In non ut sunt. Ullamco veniam mollit reprehenderit proident cillum et sit culpa quis commodo velit cillum.",
+        "spans": []
+      }
+    ]
+  }
+}
