@@ -5,7 +5,6 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName, linkResolver } from "../prismicio";
 
 import "../styles/globals.scss";
-import { Heading } from "../components/Heading";
 
 const NextLinkShim = ({ href, children, locale, ...props }) => {
   return (
@@ -17,19 +16,19 @@ const NextLinkShim = ({ href, children, locale, ...props }) => {
 
 const richTextComponents = {
   heading1: ({ children }) => (
-    <Heading as="h2" size="3xl" className="mb-7 mt-12 first:mt-0 last:mb-0">
+    <h1 as="h2" size="3xl" className="mb-7 mt-12 first:mt-0 last:mb-0">
       {children}
-    </Heading>
+    </h1>
   ),
   heading2: ({ children }) => (
-    <Heading as="h3" size="2xl" className="mb-7 last:mb-0">
+    <h2 as="h3" size="2xl" className="mb-7 last:mb-0">
       {children}
-    </Heading>
+    </h2>
   ),
   heading3: ({ children }) => (
-    <Heading as="h4" size="xl" className="mb-7 last:mb-0">
+    <h3 as="h4" size="xl" className="mb-7 last:mb-0">
       {children}
-    </Heading>
+    </h3>
   ),
   paragraph: ({ children }) => <p className="mb-7 last:mb-0">{children}</p>,
   oList: ({ children }) => (

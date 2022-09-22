@@ -2,13 +2,6 @@ import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-import { Heading } from "./Heading";
-
-const NavItem = ({ children }) => {
-  return (
-    <li className="font-semibold tracking-tight text-slate-800">{children}</li>
-  );
-};
 
 export const Header = ({
   navigation,
@@ -19,11 +12,9 @@ export const Header = ({
       <div className="grid grid-cols-1 justify-items-center gap-20">
         <nav>
           <ul className="flex flex-wrap justify-center gap-10">
-            <NavItem>
-              <PrismicLink href="/">
-                <PrismicText field={navigation.data.homepageLabel} />
-              </PrismicLink>
-            </NavItem>
+            <PrismicLink href="/">
+              <PrismicText field={navigation.data.homepageLabel} />
+            </PrismicLink>
             {navigation.data?.links.map((item) => (
               <div key={item}>
                 <PrismicLink field={item.link}>

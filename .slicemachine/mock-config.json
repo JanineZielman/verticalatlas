@@ -51,7 +51,8 @@
   "slices": {
     "ImageTemplate": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "TextTemplate": {

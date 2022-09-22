@@ -5,10 +5,11 @@ import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
-import { Heading } from "../components/Heading";
+import { Contribution } from "../components/Contribution";
 
 
 const Index = ({ contributions, navigation, settings }) => {
+  console.log(contributions)
   return (
     <Layout
       navigation={navigation}
@@ -17,7 +18,13 @@ const Index = ({ contributions, navigation, settings }) => {
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
-      
+      <div className="contributions">
+        {contributions.map((item, i) => {
+          return(
+            <Contribution item={item}/>
+          )
+        })}
+      </div>
     </Layout>
   );
 };
@@ -29,7 +36,7 @@ export async function getStaticProps({ previewData }) {
 
   const contributions = await client.getAllByType("contribution", {
     orderings: [
-      { field: "my.contribution.publishDate", direction: "desc" },
+      { field: "my.contribution.order", direction: "asc" },
     ],
   });
   const navigation = await client.getSingle("navigation");

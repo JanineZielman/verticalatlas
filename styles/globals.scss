@@ -7,3 +7,43 @@ body{
 	padding: 0;
 	background-color: #FFEFAD;
 }
+
+h2{
+	font-size: 52px;
+	line-height: 1;
+	margin: 10px 0;
+	&.longtitle{
+		font-size: 34px;
+	}
+}
+
+p{
+	font-size: 20px;
+}
+
+.contributions{
+	display: flex;
+	flex-wrap: wrap;
+	.contribution{
+		width: 300px;
+		overflow: hidden;
+		margin: 20px;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.image{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.name{
+			width: 100%;
+			padding: 10px 0;
+			border-top: 3px solid black;
+			border-bottom: 3px solid black;
+			text-transform: uppercase;
+		}
+	}
+}
