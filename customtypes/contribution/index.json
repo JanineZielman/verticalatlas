@@ -52,6 +52,24 @@
           "placeholder": ""
         }
       },
+      "endnotes": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Endnotes",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+        }
+      },
+      "black_background": {
+        "type": "Boolean",
+        "config": {
+          "label": "Black Background",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

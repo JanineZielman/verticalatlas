@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import { SliceZone } from "@prismicio/react";
 import { components } from "../slices";
+import { PrismicRichText } from '@prismicio/react'
 
 export const Contribution = ({item}) => {
 	const router = useRouter();
@@ -19,7 +20,8 @@ export const Contribution = ({item}) => {
   }, []);
 
 	const AddClass = (e) => {
-		document.getElementById(selectedId)?.classList.remove("selected");
+		const oldID = selectedItems[0]?.id;
+		document.getElementById(oldID)?.classList.remove("selected");
 		
 		const id = e.currentTarget.parentElement.id;
 		e.currentTarget.parentElement.classList.add('selected');
@@ -36,7 +38,7 @@ export const Contribution = ({item}) => {
   };
 
   return (
-		<div className="contribution-wrapper" id={item.uid}>
+		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
 			<div className="contribution" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}>X</div>
 				<div className="wrapper">
@@ -52,6 +54,9 @@ export const Contribution = ({item}) => {
 
 			<div className="content">
 				<SliceZone slices={item.data.slices} components={components} />
+				<div className='endnotes' id="endnotes">
+					<PrismicRichText field={item.data.endnotes}/>
+				</div>
 			</div>
 		</div>
   );

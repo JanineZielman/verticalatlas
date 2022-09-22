@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { useRouter } from 'next/router';
 
 const TextTemplate = ({ slice }) => {
+  const router = useRouter();
   function toggleClass() {
     var element = document.getElementById("thumbnail");
     element.classList.toggle("toggle");
   }
 
+  useEffect(() => {
+    const boldText = document.querySelectorAll('strong');
+    boldText.forEach(function(element, index) {       
+      const number = element.innerHTML.match(/\b([0-9]|[1-9][0-9])\b/)?.[0];
+      if (number) {
+        element.classList.add('footnote')
+        element.onclick = function() { 
+          window.scrollTo({
+            top: document.getElementById('scroll').scrollHeight + 50,
+            left: 0,
+            behavior: 'smooth'
+          });
+        };
+      }
+    })
+  }, [])
+
+
+
   return(
-    <section className='text-template'>
+    <section className='text-template' id="scroll">
       {slice.items.map((item, i) => {
         const size = item.image_size
         return(

@@ -46,7 +46,14 @@
         }
       }
     },
-    "contribution": {}
+    "contribution": {
+      "endnotes": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "ImageTemplate": {

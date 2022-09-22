@@ -123,6 +123,30 @@ img{
 
 .selected {
 	margin-bottom: 48px;
+	&.black-bg{
+		background-color: black;
+		color: white;
+		.contribution{
+			background-color: black;
+			color: white;
+			.name{
+				border-width: 2px;
+				border-color: white;
+			}	
+		}
+		.content{
+			background-color: black;
+			color: white;
+			.quote {
+				border-width: 2px;
+				border-color: white;
+			}
+		}
+		.thumbnail{
+			border-width: 2px;
+			border-color: white;
+		}
+	}
 	.contribution{
 		width: 96vw;
 		padding: 1vw 3vw;
@@ -238,4 +262,22 @@ img{
 			width: auto;
 		}
 	}
+}
+
+.footnote{
+	vertical-align: super;
+	font-size: 14px;
+	font-weight: 300;
+	text-decoration: underline;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.endnotes{
+	margin-top: 48px;
+	width: 600px;
+	font-weight: 300;
+	font-family: Times;
+	font-size: 14px;
 }
