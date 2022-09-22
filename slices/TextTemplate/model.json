@@ -12,21 +12,62 @@
       "description": "TextTemplate",
       "primary": {},
       "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 1920,
+              "height": 1280
+            },
+            "thumbnails": [
+              {
+                "name": "landscape",
+                "width": 1920,
+                "height": 1080
+              },
+              {
+                "name": "portrait",
+                "width": 1080,
+                "height": 1920
+              },
+              {
+                "name": "square",
+                "width": 1080,
+                "height": 1080
+              }
+            ]
+          }
+        },
+        "image_size": {
+          "type": "Select",
+          "config": {
+            "label": "Image Size",
+            "placeholder": "",
+            "options": [
+              "main",
+              "landscape",
+              "portrait",
+              "square"
+            ]
+          }
+        },
         "text": {
           "type": "StructuredText",
           "config": {
             "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,strong,em,hyperlink,image,list-item,o-list-item,rtl"
           }
         },
-        "image": {
-          "type": "Image",
+        "quote": {
+          "type": "StructuredText",
           "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Quote",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,hyperlink,em,strong"
           }
         }
       },

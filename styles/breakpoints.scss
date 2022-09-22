@@ -1,0 +1,25 @@
+@media only screen and (max-width: 600px) {
+	h2{
+		font-size: 36px;
+		&.longtitle {
+			font-size: 24px;
+		}
+	}
+	p{
+		font-size: 15px;
+	}
+	.contributions{
+		width: 100vw;
+		justify-content: flex-start;
+		.contribution{
+			width: 45vw;
+			margin: 2.5vw;
+			height: 280px;
+			.image{
+				img{
+					max-height: 120px;
+				}
+			}
+		}
+	}
+}

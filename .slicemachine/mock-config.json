@@ -51,13 +51,34 @@
   "slices": {
     "ImageTemplate": {
       "default": {
-        "primary": {},
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
     "TextTemplate": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "quote": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }

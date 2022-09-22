@@ -39,7 +39,9 @@
         "type": "Image",
         "config": {
           "label": "Cover Image",
-          "constraint": {},
+          "constraint": {
+            "height": 200
+          },
           "thumbnails": []
         }
       },

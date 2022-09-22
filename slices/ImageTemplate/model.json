@@ -17,7 +17,7 @@
             "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
           }
         }
       },
@@ -26,8 +26,40 @@
           "type": "Image",
           "config": {
             "label": "Image",
-            "constraint": {},
-            "thumbnails": []
+            "constraint": {
+              "width": 1920,
+              "height": 1280
+            },
+            "thumbnails": [
+              {
+                "name": "portrait",
+                "width": 1080,
+                "height": 1920
+              },
+              {
+                "name": "landscape",
+                "width": 1920,
+                "height": 1080
+              },
+              {
+                "name": "square",
+                "width": 1080,
+                "height": 1080
+              }
+            ]
+          }
+        },
+        "image_size": {
+          "type": "Select",
+          "config": {
+            "label": "Image Size",
+            "placeholder": "",
+            "options": [
+              "main",
+              "landscape",
+              "portrait",
+              "square"
+            ]
           }
         }
       },

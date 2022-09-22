@@ -9,7 +9,6 @@ import { Contribution } from "../components/Contribution";
 
 
 const Index = ({ contributions, navigation, settings }) => {
-  console.log(contributions)
   return (
     <Layout
       navigation={navigation}

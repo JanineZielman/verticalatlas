@@ -40,6 +40,8 @@ body{
 	padding: 0;
 	background-color: #FFEFAD;
 	font-family: Flexa;
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 h2{
@@ -56,23 +58,46 @@ p{
 	font-size: 20px;
 }
 
+img{
+	max-width: 100%;
+}
+
 .contributions{
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	// justify-content: space-evenly;
+	padding-bottom: 48px;
 	.contribution{
+		position: relative;
 		width: 300px;
 		overflow: hidden;
-		margin: 20px;
-		height: 400px;
+		cursor: pointer;
+		margin: 0 1vw 1vw 1vw;
+		// margin: 20px;
+		height: 370px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		.wrapper{
+			height: 100%;
+			width: 300px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
 		.image{
+			position: relative;
+			overflow: hidden;
+			
 			img{
-				width: 100%;
-				max-height: 170px;
-				object-fit: contain;
+				display: block;
+				width: auto;
+				height: 170px;
+				object-fit: cover;
+				margin: auto;
 			}
 		}
 		.name{
@@ -82,6 +107,77 @@ p{
 			border-bottom: 3px solid black;
 			text-transform: uppercase;
 			font-weight: 200;
+			margin: 0;
+			margin-top: 10px;
+		}
+		.close{
+			display: none;
+		}
+	}
+}
+
+
+.content{
+	display: none;
+}
+
+.selected {
+	margin-bottom: 48px;
+	.contribution{
+		width: 96vw;
+		padding: 1vw 3vw;
+		margin: 0;
+		background-color: #FDFBDA;
+		.name{
+			width: 100%;
+		}
+		.wrapper{
+			margin-left: 200px;
+		}
+		.close{
+			display: block;
+			position: absolute;
+			right: 3vw;
+			cursor: pointer;
+			font-weight: 100;
+			font-size: 38px;
+		}
+	}
+	.content{
+		background-color: #FDFBDA;
+		display: block;
+		width: 96vw;
+		padding: 0 3vw;
+		padding-top: 10px;
+		padding-bottom: 48px;
+		.text-template{
+			margin-left: 200px;
+		}
+		.content-wrapper{
+			img{
+				max-height: 90vh;
+				margin-bottom: 24px;
+			}
+			.text{
+				max-width: 900px;
+				padding-right: 14px;
+			}
+			p{
+				font-family: Times;
+				line-height: 1.3;
+			}
+		}
+		.quote{
+			border-top: 4px solid black;
+			padding: 14px 0;
+			margin-top: 48px;
+		}
+		.text-wrapper{
+			width: 600px;
+			p {
+				font-weight: 300;
+				line-height: 1.3;
+			}
 		}
 	}
 }
