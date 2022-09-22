@@ -21,7 +21,7 @@ const Index = ({ contributions, navigation, settings }) => {
       <div className="contributions">
         {contributions.map((item, i) => {
           return(
-            <Contribution item={item}/>
+            <Contribution item={item} key={`contribution-${i}`}/>
           )
         })}
       </div>
