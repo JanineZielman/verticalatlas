@@ -6,9 +6,14 @@ const ImageTemplate = ({ slice }) => (
     {slice.items.map((item, i) => {
       const size = item.image_size
       return(
-        <div key={`image-template-item-${i}`} className="content-wrapper">
+        <div key={`image-template-item-${i}`} className="content-wrapper image-item">
           {item.image.url &&
             <img src={item.image[size]?.url ? item.image[size].url : item.image.url}/>
+          }
+          {item.image_caption[0] &&
+            <div className='caption'>
+              <PrismicRichText field={item.image_caption}/>
+            </div>
           }
         </div>
       )

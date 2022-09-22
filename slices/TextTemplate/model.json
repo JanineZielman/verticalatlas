@@ -52,6 +52,15 @@
             ]
           }
         },
+        "image_caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Image Caption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,hyperlink,list-item,o-list-item"
+          }
+        },
         "text": {
           "type": "StructuredText",
           "config": {

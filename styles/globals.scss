@@ -154,13 +154,14 @@ img{
 			margin-left: 200px;
 		}
 		.content-wrapper{
+			transition: all 0.4s ease-in-out;
 			img{
 				max-height: 90vh;
-				margin-bottom: 24px;
 			}
 			.text{
 				max-width: 900px;
 				padding-right: 14px;
+				transition: all 0.4s ease-in-out;
 			}
 			p{
 				font-family: Times;
@@ -178,6 +179,63 @@ img{
 				font-weight: 300;
 				line-height: 1.3;
 			}
+		}
+	}
+}
+
+.image-item{
+	margin-bottom: 24px;
+}
+
+.caption {
+	height: auto;
+	padding: 10px 0;
+	p {
+		font-size: 16px;
+		margin: 0;
+	}
+}
+
+.thumbnail{
+	width: 150px;
+	height: 200px;
+	margin-left: -200px;
+	margin-top: -130px;
+	margin-bottom: -70px;
+	border-top: 3px solid black;
+	padding-top: 10px;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+	.caption{
+		display: none;
+	}
+	img{
+		margin-bottom: 0!important;
+	}
+	&:after{
+		content: '→';
+		font-size: 30px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&.toggle{
+		height: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		width: 900px;
+		.caption {
+			display: block;
+			p{
+				font-size: 16px;
+			}
+		}
+		&:after {
+			content: '←';
+		}
+		img {
+			object-fit: contain;
+			height: 100%;
+			width: auto;
 		}
 	}
 }

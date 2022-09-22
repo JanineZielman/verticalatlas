@@ -59,7 +59,14 @@
             }
           }
         },
-        "items": {}
+        "items": {
+          "image_caption": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "TextTemplate": {
@@ -75,6 +82,12 @@
           "quote": {
             "config": {
               "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "image_caption": {
+            "config": {
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }

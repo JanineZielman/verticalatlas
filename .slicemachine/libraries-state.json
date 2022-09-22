@@ -69,6 +69,15 @@
                       "square"
                     ]
                   }
+                },
+                "image_caption": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Image Caption",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,em,strong,hyperlink,o-list-item,list-item"
+                  }
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -88,7 +97,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
                   "portrait": {
                     "dimensions": {
                       "width": 1080,
@@ -96,7 +105,7 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+                    "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
                   },
                   "landscape": {
                     "dimensions": {
@@ -105,7 +114,7 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                    "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
                   },
                   "square": {
                     "dimensions": {
@@ -114,17 +123,24 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
+                    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
                   }
                 },
-                "image_size": "square"
+                "image_size": "main",
+                "image_caption": [
+                  {
+                    "type": "paragraph",
+                    "text": "Et ex veniam mollit excepteur mollit et labore in.",
+                    "spans": []
+                  }
+                ]
               }
             ],
             "primary": {
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Aute est labore eiusmod officia anim excepteur magna elit cupidatat veniam sint occaecat. Dolore sint reprehenderit dolor quis consequat incididunt qui adipisicing ullamco qui sint proident eu culpa proident.",
+                  "text": "Magna proident dolor non labore sint nulla reprehenderit culpa. Fugiat enim aute eiusmod mollit culpa anim. Cillum ut voluptate sint id ut eu sint.",
                   "spans": []
                 }
               ]
@@ -197,6 +213,15 @@
                     ]
                   }
                 },
+                "image_caption": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Image Caption",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,em,strong,hyperlink,list-item,o-list-item"
+                  }
+                },
                 "text": {
                   "type": "StructuredText",
                   "config": {
@@ -233,7 +258,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
                   "landscape": {
                     "dimensions": {
                       "width": 1920,
@@ -241,7 +266,7 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+                    "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
                   },
                   "portrait": {
                     "dimensions": {
@@ -250,7 +275,7 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+                    "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a"
                   },
                   "square": {
                     "dimensions": {
@@ -259,21 +284,28 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+                    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89"
                   }
                 },
-                "image_size": "landscape",
+                "image_size": "main",
+                "image_caption": [
+                  {
+                    "type": "paragraph",
+                    "text": "Aliquip irure eiusmod mollit ad amet non ad veniam voluptate. Nostrud cupidatat labore aliquip duis duis ex excepteur cupidatat sit quis dolore. Consectetur ipsum ad mollit ullamco.",
+                    "spans": []
+                  }
+                ],
                 "text": [
                   {
                     "type": "paragraph",
-                    "text": "Deserunt dolore deserunt duis excepteur excepteur adipisicing nulla occaecat sint.",
+                    "text": "Ea deserunt qui proident sit do minim nulla.",
                     "spans": []
                   }
                 ],
                 "quote": [
                   {
                     "type": "heading2",
-                    "text": "Earth",
+                    "text": "Sound",
                     "spans": []
                   }
                 ]

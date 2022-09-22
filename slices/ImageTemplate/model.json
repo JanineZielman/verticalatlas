@@ -61,6 +61,15 @@
               "square"
             ]
           }
+        },
+        "image_caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Image Caption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,hyperlink,o-list-item,list-item"
+          }
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
