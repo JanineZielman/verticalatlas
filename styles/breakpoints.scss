@@ -1,12 +1,12 @@
 @media only screen and (max-width: 600px) {
 	h2{
-		font-size: 36px;
+		font-size: 34px;
 		&.longtitle {
 			font-size: 24px;
 		}
 	}
 	p{
-		font-size: 15px;
+		font-size: 16px;
 	}
 	.contributions{
 		width: 100vw;
@@ -15,11 +15,57 @@
 			width: 45vw;
 			margin: 2.5vw;
 			height: 280px;
+			.name{
+				border-width: 2px;
+			}
+			.wrapper{
+				width: 100%;
+			}
 			.image{
 				img{
 					max-height: 120px;
 				}
 			}
+		}
+	}
+	.selected{
+		.contribution{
+			width: 100vw;
+			margin: 0;
+			.wrapper{
+				margin: 0;
+			}
+			.image{
+				img{
+					margin: 0;
+				}
+			}
+		}
+		.content{
+			.text-wrapper{
+				width: 100%;
+			}
+			.text-template{
+				margin-left: 50px;
+			}
+			width: 100vw;
+		}
+	}
+	.endnotes{
+		width: 100%;
+	}
+	.thumbnail{
+		width: 40px;
+		height: 80px;
+		margin-left: -50px;
+		margin-top: -50px;
+		margin-bottom: -25px;
+		border-width: 2px;
+		&:after{
+			font-size: 22px;
+		}
+		&.toggle{
+			width: 100%;
 		}
 	}
 }
