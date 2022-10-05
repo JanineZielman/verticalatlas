@@ -1,21 +1,31 @@
 import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
+import { PrismicRichText } from '@prismicio/react'
 
 import { createClient, linkResolver } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
 const Page = ({ page, navigation, settings }) => {
+  console.log(page)
   return (
     <Layout navigation={navigation} settings={settings}>
       <Head>
         <title>
-          {prismicH.asText(page.data.title)} |{" "}
+          {page.data.title} |{" "}
           {prismicH.asText(settings.data.name)}
         </title>
       </Head>
-      <SliceZone slices={page.data.slices} components={components} />
+      <div className="page">
+        <div className="container">
+          {page.data.image?.url && <img className="page-image" src={page.data.image?.url}/>}
+          {page.data.title && <h1>{page.data.title}</h1>}
+          {page.data.text && <PrismicRichText field={page.data.text}/>}
+          <br/>
+          <SliceZone slices={page.data.slices} components={components} />
+        </div>
+      </div>
     </Layout>
   );
 };

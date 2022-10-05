@@ -17,9 +17,9 @@
       }
     },
     "page": {
-      "title": {
+      "text": {
         "config": {
-          "patternType": "HEADING",
+          "patternType": "PARAGRAPH",
           "blocks": 1
         }
       }
@@ -53,7 +53,9 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "person": {},
+    "people": {}
   },
   "slices": {
     "ImageTemplate": {
@@ -99,6 +101,12 @@
             }
           }
         }
+      }
+    },
+    "Logos": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

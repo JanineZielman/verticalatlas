@@ -1,0 +1,23 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "people",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": "third",
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Nostrud nulla quis deserunt. Nostrud minim amet anim exercitation voluptate amet minim anim eiusmod in laboris. Minim duis reprehenderit commodo laboris in irure do laborum culpa ipsum nisi sint labore.",
+        "spans": []
+      }
+    ]
+  }
+}
