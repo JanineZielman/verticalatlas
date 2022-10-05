@@ -4,7 +4,7 @@ import { SliceZone } from "@prismicio/react";
 import { components } from "../slices";
 import { PrismicRichText } from '@prismicio/react'
 
-export const Contribution = ({item}) => {
+export const Person = ({item}) => {
 	const router = useRouter();
 
 	const [selectedItems, setSelectedItems] = useState([]);
@@ -38,24 +38,15 @@ export const Contribution = ({item}) => {
   };
 
   return (
-		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
-			<div className="contribution" onClick={AddClass}>
+		<div className={`person-wrapper`} id={item.uid}>
+			<div className="person" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}></div>
 				<div className="wrapper">
-					<h2 className={item.data.longtitle ? 'longtitle' : ''}>{item.data.title}</h2>
-					{item.data.cover_image.url &&
-						<div className="image">
-							<img src={item.data.cover_image.url}/>
-						</div>
-					}
+					<h2>{item.data.full_name}</h2>
 				</div>
-				<p className="name">{item.data.full_name}</p>
-			</div>
-
-			<div className="content">
-				<SliceZone slices={item.data.slices} components={components} />
-				<div className='endnotes' id="endnotes">
-					<PrismicRichText field={item.data.endnotes}/>
+				<p className="role">{item.data.role}</p>
+				<div className="content">
+					<PrismicRichText field={item.data.bio}/>
 				</div>
 			</div>
 		</div>

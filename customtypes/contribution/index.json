@@ -35,6 +35,14 @@
           "placeholder": ""
         }
       },
+      "link_to_contributor": {
+        "type": "Link",
+        "config": {
+          "label": "Link to contributor",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "cover_image": {
         "type": "Image",
         "config": {

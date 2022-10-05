@@ -54,7 +54,14 @@
         }
       }
     },
-    "person": {},
+    "person": {
+      "bio": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "people": {}
   },
   "slices": {

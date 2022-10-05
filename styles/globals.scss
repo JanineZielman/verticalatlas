@@ -29,7 +29,26 @@
 	src: url("fonts/GT-Flexa-Mono-Regular.otf") format("opentype");
 }
 
+$yellow: #FFEFAD;
+$light-yellow: #FDFBDA;
+$black: black;
+$white: white;
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+	border: 1px solid black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: black;
+	border-radius: 25px;
+}
 
 body, html{
 	scroll-behavior: smooth;
@@ -38,7 +57,7 @@ body, html{
 body{
 	margin: 0;
 	padding: 0;
-	background-color: #FFEFAD;
+	background-color: $yellow;
 	font-family: Flexa;
 	width: 100vw;
 	overflow-x: hidden;
@@ -62,6 +81,88 @@ img{
 	max-width: 100%;
 }
 
+.header{
+	height: 65px;
+}
+
+.hamburger{
+	position: fixed;
+	left: 1vw;
+	top: 24px;
+	width: 48px;
+	height: 48px;
+	mask-image: url('hamburger.svg');
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	background-color: $black;
+	z-index: 1;
+	cursor: pointer;
+}
+
+nav {
+	position: relative;
+	width: 100%;
+	padding-top: 80px;
+	div{
+		margin: 24px 0;
+		border-bottom: 2px solid black;
+	}
+	a {
+		text-decoration: none;
+		color: $black;
+		font-size: 36px;
+		transition: opacity 0.3s ease-in-out;
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+}
+
+.close {
+	width: 36px;
+	height: 36px;
+	mask-image: url('close.svg');
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	background-color: $black;
+	z-index: 8;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+.ReactModal__Overlay {
+	// opacity: 0;
+	transform: translateX(-650px);
+	transition: all 500ms ease-in-out;
+	background-color: transparent!important;
+}
+
+.ReactModal__Overlay--after-open {
+	// opacity: 1;
+	transform: translateX(0px);
+}
+
+.ReactModal__Overlay--before-close {
+	// opacity: 0;
+	transform: translateX(-650px);
+}
+
+.ReactModal__Content{
+	border: none!important;
+}
+
+
+.ReactModal__Overlay{
+	z-index: 8;
+	.language{
+		bottom: 10vh; 
+		left: 15vw;
+		width: auto;
+	}
+}
+
 .container{
 	width: 1100px;
 	display: block;
@@ -69,6 +170,7 @@ img{
 }
 
 .contributions{
+	padding-top: 48px;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -106,8 +208,8 @@ img{
 		.name{
 			width: 100%;
 			padding: 10px 0;
-			border-top: 3px solid black;
-			border-bottom: 3px solid black;
+			border-top: 3px solid $black;
+			border-bottom: 3px solid $black;
 			text-transform: uppercase;
 			font-weight: 200;
 			margin: 0;
@@ -127,34 +229,37 @@ img{
 .selected {
 	margin-bottom: 48px;
 	&.black-bg{
-		background-color: black;
-		color: white;
+		background-color: $black;
+		color: $white;
+		.close{
+			background-color: $white;
+		}
 		.contribution{
-			background-color: black;
-			color: white;
+			background-color: $black;
+			color: $white;
 			.name{
 				border-width: 2px;
-				border-color: white;
+				border-color: $white;
 			}	
 		}
 		.content{
-			background-color: black;
-			color: white;
+			background-color: $black;
+			color: $white;
 			.quote {
 				border-width: 2px;
-				border-color: white;
+				border-color: $white;
 			}
 		}
 		.thumbnail{
 			border-width: 2px;
-			border-color: white;
+			border-color: $white;
 		}
 	}
 	.contribution{
 		width: 96vw;
 		padding: 1vw 3vw;
 		margin: 0;
-		background-color: #FDFBDA;
+		background-color: $light-yellow;
 		.name{
 			width: 100%;
 		}
@@ -165,13 +270,14 @@ img{
 			display: block;
 			position: absolute;
 			right: 3vw;
+			top: 24px;
 			cursor: pointer;
 			font-weight: 100;
 			font-size: 38px;
 		}
 	}
 	.content{
-		background-color: #FDFBDA;
+		background-color: $light-yellow;
 		display: block;
 		width: 96vw;
 		padding: 0 3vw;
@@ -196,7 +302,7 @@ img{
 			}
 		}
 		.quote{
-			border-top: 4px solid black;
+			border-top: 4px solid $black;
 			padding: 14px 0;
 			margin-top: 48px;
 		}
@@ -229,7 +335,7 @@ img{
 	margin-left: -200px;
 	margin-top: -130px;
 	margin-bottom: -70px;
-	border-top: 3px solid black;
+	border-top: 3px solid $black;
 	padding-top: 10px;
 	cursor: pointer;
 	transition: all 0.4s ease-in-out;
@@ -288,7 +394,7 @@ img{
 .logo-section{
 	h1{
 		padding-bottom: 10px;
-		border-bottom: 2px solid black;
+		border-bottom: 2px solid $black;
 	}
 	.logos{
 		display: flex;
@@ -300,9 +406,66 @@ img{
 	}
 }
 
-
 .page-image{
-	height: 60vh;
-	display: block;
-	margin: auto;
+	padding: 14px 0;
+	width: 100%;
+	border-top: 2px solid $black;
+	img{
+		width: 50%;
+	}
+}
+
+
+.people {
+	width: 92vw;
+	padding: 0 4vw;
+	h1 {
+		border-bottom: 2px solid $black;
+		padding-bottom: 10px;
+	}
+	.people-flex{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.person{
+		position: relative;
+		width: 600px;
+		max-width: 92vw;
+		overflow: hidden;
+		cursor: pointer;
+		margin: 0 2vw 1vw 0vw;
+		border-bottom: 3px solid $black;
+		transition: all 0.4s ease-in-out;
+		h2, p{
+			margin: 10px 0;
+		}
+	}
+	.close {
+		display: none;
+	}
+	.content{
+		display: block;
+		min-height: 0;
+		height: 0;
+		opacity: 0;
+		transition: all 0.4s ease-in-out;
+	}
+	.selected{
+		.close{
+			display: block;
+			top: 1vw;
+		}
+		.content {
+			background-color: transparent;
+			padding: 0;
+			width: 95%;
+			height: auto;
+			height: 400px;
+			opacity: 1;
+			overflow-y: scroll;
+			padding-right: 5%;
+			padding-bottom: 5%;
+			margin: 24px 0;
+		}
+	} 
 }

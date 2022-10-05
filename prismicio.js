@@ -23,6 +23,10 @@ export const linkResolver = (doc) => {
     return `/${doc.uid}`;
   }
 
+  if (doc.type === "people") {
+    return `/${doc.uid}`;
+  }
+
   return "/";
 };
 

@@ -19,9 +19,13 @@ const Page = ({ page, navigation, settings }) => {
       </Head>
       <div className="page">
         <div className="container">
-          {page.data.image?.url && <img className="page-image" src={page.data.image?.url}/>}
           {page.data.title && <h1>{page.data.title}</h1>}
           {page.data.text && <PrismicRichText field={page.data.text}/>}
+          {page.data.image?.url && 
+            <div className="page-image">
+              <img src={page.data.image?.url}/>
+            </div>
+          }
           <br/>
           <SliceZone slices={page.data.slices} components={components} />
         </div>
