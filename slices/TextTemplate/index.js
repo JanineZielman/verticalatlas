@@ -4,8 +4,9 @@ import { useRouter } from 'next/router';
 
 const TextTemplate = ({ slice }) => {
   const router = useRouter();
-  function toggleClass() {
-    var element = document.getElementById("thumbnail");
+  function toggleClass(e) {
+    var element = document.getElementById(e.currentTarget.id);
+    // var element = document.getElementById("thumbnail");
     element.classList.toggle("toggle");
   }
 
@@ -35,7 +36,7 @@ const TextTemplate = ({ slice }) => {
         return(
           <div key={`text-template-item-${i}`} className="content-wrapper">
             {item.image.url &&
-              <div className='thumbnail' id="thumbnail" onClick={toggleClass}>
+              <div className='thumbnail' id={`${item.image.url}-${i}`} onClick={toggleClass}>
                 <img src={item.image[size]?.url ? item.image[size].url : item.image.url}/>
                 {item.image_caption[0] &&
                   <div className='caption'>
