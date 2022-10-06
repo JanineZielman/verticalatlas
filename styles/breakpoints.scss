@@ -66,11 +66,12 @@
 	}
 	.thumbnail{
 		width: 40px;
-		height: 80px;
+		height: 70px;
 		margin-left: -50px;
-		margin-top: -50px;
-		margin-bottom: -25px;
+		// margin-top: -50px;
+		margin-bottom: -75px;
 		border-width: 2px;
+		padding: 5px 0;
 		&:after{
 			font-size: 22px;
 		}
