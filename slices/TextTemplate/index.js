@@ -6,7 +6,6 @@ const TextTemplate = ({ slice }) => {
   const router = useRouter();
   function toggleClass(e) {
     var element = document.getElementById(e.currentTarget.id);
-    // var element = document.getElementById("thumbnail");
     element.classList.toggle("toggle");
   }
 
@@ -18,7 +17,7 @@ const TextTemplate = ({ slice }) => {
         element.classList.add('footnote')
         element.onclick = function() { 
           window.scrollTo({
-            top: document.getElementById('scroll').scrollHeight + 50,
+            top: document.getElementById(element.parentElement.parentElement.parentElement.parentElement.id).scrollHeight + document.getElementById(element.parentElement.parentElement.parentElement.parentElement.id).offsetTop,
             left: 0,
             behavior: 'smooth'
           });
@@ -30,7 +29,7 @@ const TextTemplate = ({ slice }) => {
 
 
   return(
-    <section className='text-template' id="scroll">
+    <section className='text-template' id={slice.id}>
       {slice.items.map((item, i) => {
         const size = item.image_size
         return(
