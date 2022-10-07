@@ -1,6 +1,84 @@
 {
   "slices": {
     "components": {
+      "big_image": {
+        "library": "slices",
+        "id": "big_image",
+        "name": "BigImage",
+        "description": "BigImage",
+        "model": {
+          "id": "big_image",
+          "type": "SharedSlice",
+          "name": "BigImage",
+          "description": "BigImage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BigImage",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {
+                      "width": 1920,
+                      "height": null
+                    },
+                    "thumbnails": []
+                  }
+                },
+                "caption": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Caption",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,em,strong,hyperlink,list-item,o-list-item"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 1920,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+              },
+              "caption": [
+                {
+                  "type": "paragraph",
+                  "text": "Qui magna anim excepteur consequat nisi esse et aliquip non amet. Aliquip sunt qui proident et eu deserunt reprehenderit aliquip eu tempor id proident qui reprehenderit.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "big_image"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "image_template": {
         "library": "slices",
         "id": "image_template",

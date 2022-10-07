@@ -88,6 +88,9 @@
             },
             "text_template": {
               "type": "SharedSlice"
+            },
+            "big_image": {
+              "type": "SharedSlice"
             }
           }
         }
