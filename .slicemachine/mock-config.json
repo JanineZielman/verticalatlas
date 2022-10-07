@@ -115,6 +115,18 @@
         "primary": {},
         "items": {}
       }
+    },
+    "BigImage": {
+      "default": {
+        "primary": {
+          "caption": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }
