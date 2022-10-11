@@ -1,11 +1,13 @@
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Modal from 'react-modal';
 
 
 export const Header = ({navigation, settings}) => {
+
+  const [scrollPos, setScrollPos] = useState(null)
   
   const customStyles = {
 		content: {
@@ -35,6 +37,23 @@ export const Header = ({navigation, settings}) => {
 		setTimeout(setIsOpen(false), 3000);
 	}
 
+  useEffect(() => {
+    window.addEventListener('scroll', scrollPlay)
+
+    return () => {
+      window.removeEventListener('scroll', scrollPlay);
+    };
+  }, []);
+
+  function scrollPlay(){  
+    const vid = document.getElementById('v0'); 
+    var frameNumber  = window.pageYOffset / 150;
+    vid.currentTime  = frameNumber;
+    window.requestAnimationFrame(scrollPlay);
+  }
+
+
+
   return (
     <div className="header">
       <div onClick={openModal} className="hamburger"></div>
@@ -60,6 +79,14 @@ export const Header = ({navigation, settings}) => {
           ))}
         </nav>
       </Modal>
+      <div className="scroll-bound">
+        <div className="scroll-wrapper">
+          <p>Vertical Atlas</p>
+          <video id="v0" width="600" height="100" muted autoPlay>
+            <source src="/scroll.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
     </div>
   );
 };
