@@ -11,15 +11,19 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "full_name": "weight",
-    "role": "fought",
+    "full_name": "whenever",
+    "role": "chosen",
     "bio": [
       {
         "type": "paragraph",
-        "text": "Reprehenderit dolore sit anim amet aliqua ad elit aliqua.",
+        "text": "Id elit enim amet consectetur cupidatat fugiat sunt. Aliquip ipsum sunt proident magna proident elit ut aliquip excepteur nulla enim quis qui. Nisi ea qui excepteur officia enim anim.",
         "spans": []
       }
     ],
-    "order": 57
+    "order": 50,
+    "link": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    }
   }
 }

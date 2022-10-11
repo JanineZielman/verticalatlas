@@ -9,7 +9,6 @@ import { Person } from "../components/Person";
 
 
 const Index = ({ page, people, navigation, settings }) => {
-	console.log(people)
   return (
     <Layout
       navigation={navigation}

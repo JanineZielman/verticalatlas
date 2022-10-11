@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { useRouter } from 'next/router';
 
 const TextTemplate = ({ slice }) => {
-  const router = useRouter();
+
   function toggleClass(e) {
     var element = document.getElementById(e.currentTarget.id);
     element.classList.toggle("toggle");
@@ -11,13 +10,17 @@ const TextTemplate = ({ slice }) => {
 
   useEffect(() => {
     const boldText = document.querySelectorAll('strong');
+    let id = '';
+    if(window.location.hash) {
+			id = window.location.hash.replace('#','');
+		} 
     boldText.forEach(function(element, index) {       
       const number = element.innerHTML.match(/\b([0-9]|[1-9][0-9])\b/)?.[0];
       if (number) {
         element.classList.add('footnote')
         element.onclick = function() { 
           window.scrollTo({
-            top: document.getElementById(element.parentElement.parentElement.parentElement.parentElement.id).scrollHeight + document.getElementById(element.parentElement.parentElement.parentElement.parentElement.id).offsetTop,
+            top: document.getElementById(id).clientHeight + document.getElementById(id).offsetTop - window.innerHeight,
             left: 0,
             behavior: 'smooth'
           });

@@ -66,14 +66,16 @@
 	}
 	.thumbnail{
 		width: 40px;
-		height: 70px;
+		height: auto;
 		margin-left: -50px;
 		// margin-top: -50px;
-		margin-bottom: -75px;
+		margin-bottom: -40px;
 		border-width: 2px;
 		padding: 5px 0;
 		&:after{
-			font-size: 22px;
+			width: 22px;
+			height: 22px;
+			bottom: -22px;
 		}
 		&.toggle{
 			width: 100%;
