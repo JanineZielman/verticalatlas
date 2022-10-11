@@ -92,7 +92,7 @@ img{
 .header{
 	height: 65px;
 	width: 100vw;
-	background-color: $yellow;
+	// background-color: $yellow;
 	position: fixed;
 	z-index: 999;
 	top: 0;
@@ -656,7 +656,7 @@ nav {
 		text-transform: uppercase;
 	}
 	video{
-		width: 410px;
+		width: 300px;
 		max-width: calc(100vw - 150px);
 		height: auto;
 	}
