@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
-import { SliceZone } from "@prismicio/react";
-import { components } from "../slices";
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 
 export const Person = ({item}) => {
 	const router = useRouter();
@@ -47,6 +45,10 @@ export const Person = ({item}) => {
 				<p className="role">{item.data.role}</p>
 				<div className="content">
 					<PrismicRichText field={item.data.bio}/>
+
+					<PrismicLink field={item.data.link}>
+						Link
+					</PrismicLink>
 				</div>
 			</div>
 		</div>

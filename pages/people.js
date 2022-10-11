@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { PrismicLink, PrismicText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
