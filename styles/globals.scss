@@ -31,6 +31,7 @@
 
 $yellow: #FFEFAD;
 $light-yellow: #FDFBDA;
+$orange: rgba(255, 195, 5, 1);
 $black: black;
 $white: white;
 
@@ -41,7 +42,7 @@ $white: white;
 /* Track */
 ::-webkit-scrollbar-track {
 	background: transparent;
-	border: 1px solid black;
+	// border: 1px solid black;
 }
 
 /* Handle */
@@ -57,7 +58,8 @@ body, html{
 body{
 	margin: 0;
 	padding: 0;
-	background-color: $yellow;
+	background: $yellow;
+	// background: linear-gradient(180deg, $orange 0%, $orange 30%, rgba(255, 239, 173, 1) 100%);
 	font-family: Flexa;
 	width: 100vw;
 	overflow-x: hidden;
@@ -511,4 +513,111 @@ nav {
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+.hero{
+	height: 100vh;
+	background-color: rgb(255, 195,5);
+	margin-top: -65px;
+	color: $white;
+	overflow: hidden;
+	position: relative;
+	animation: fadeOut 2s linear 3s 1 forwards;
+
+	.scroll{
+		transform: rotate(90deg) translate(0, 0%);
+		transform-origin: top;
+		position: absolute;
+		white-space: nowrap;
+		top: 0;
+		clear: both;
+		display: inline-block;
+		width:100px;
+		font-size: 25vw;
+		font-weight: 300;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	.scroll1{
+		right: 22vw;
+		top: 0;
+		transform: rotate(-90deg) translate(0, 0%);
+		animation: moving 6s linear 0s infinite alternate;
+	}
+	.scroll2 {
+		right: 42vw;
+		top: 0;
+		transform: rotate(-90deg) translate(0, 0%);
+		animation: moving2 10s linear 0s infinite alternate;
+	}
+	.scroll3 {
+		right: 36vw;
+		top: 0;
+		animation: moving3 6s linear 0s infinite alternate;
+	}
+	.scroll4 {
+		right: 57vw;
+		top: 0;
+		animation: moving4 6s linear 0s infinite alternate;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		margin-top: -65px;
+	}
+
+	to {
+		margin-top: calc(-100vh - 65px);
+	}
+}
+
+@keyframes moving {
+	from {
+		margin-top: 0;
+	}
+
+	to {
+		margin-top: 200vh;
+	}
+}
+
+@keyframes moving2 {
+	from {
+		margin-top: 200vh;
+	}
+
+	to {
+		margin-top: 0vh;
+	}
+}
+
+@keyframes moving3 {
+	from {
+		margin-top: -50vh;
+	}
+
+	to {
+		margin-top: 50vh;
+	}
+}
+
+@keyframes moving4 {
+	from {
+		margin-top: 50vh;
+	}
+
+	to {
+		margin-top: -150vh;
+	}
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgb(255, 195, 5);
+	background: linear-gradient(360deg, rgba(255, 239, 173, 1) 0%, rgba(255, 239, 173, 0) 30%);
 }

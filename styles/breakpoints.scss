@@ -92,4 +92,25 @@
 		}
 
 	}
+		.hero {
+			.scroll {
+				font-size: 120px;
+			}
+			.scroll1{
+				right: 65px;
+				animation-duration: 10s;
+			}
+			.scroll2 {
+				right: 160px;
+				animation-duration: 10s;
+			}
+			.scroll3 {
+				right: 130px;
+				animation-duration: 10s;
+			}
+			.scroll4 {
+				right: 230px;
+				animation-duration: 10s;
+			}
+		}
 }

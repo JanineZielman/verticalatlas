@@ -6,6 +6,7 @@ import * as prismicH from "@prismicio/helpers";
 import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import { Contribution } from "../components/Contribution";
+import { Hero } from "../components/Hero";
 
 
 const Index = ({ contributions, navigation, settings }) => {
@@ -17,6 +18,7 @@ const Index = ({ contributions, navigation, settings }) => {
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
+      <Hero/>
       <div className="contributions">
         {contributions.map((item, i) => {
           return(
