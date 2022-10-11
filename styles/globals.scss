@@ -64,10 +64,11 @@ body{
 }
 
 h2{
-	font-size: 52px;
+	font-size: 48px;
 	line-height: 1;
 	margin: 10px 0 20px 0;
 	font-weight: 100;
+	text-transform: capitalize;
 	&.longtitle{
 		font-size: 34px;
 	}
@@ -75,6 +76,10 @@ h2{
 
 p{
 	font-size: 20px;
+}
+
+a{
+	color: $black;
 }
 
 img{
@@ -184,7 +189,7 @@ nav {
 		overflow: hidden;
 		cursor: pointer;
 		margin: 0 24px 48px 24px;
-		height: 370px;
+		height: 380px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -203,7 +208,8 @@ nav {
 			img{
 				display: block;
 				width: auto;
-				height: 170px;
+				// height: 170px;
+				height: 100%;
 				object-fit: cover;
 				margin: auto;
 			}
@@ -336,14 +342,14 @@ nav {
 
 .thumbnail{
 	width: 150px;
-	height: 200px;
+	height: auto;
 	margin-left: -200px;
-	// margin-top: -130px;
-	margin-bottom: -200px;
+	margin-bottom: -100px;
 	border-top: 3px solid $black;
 	padding-top: 10px;
 	cursor: pointer;
 	transition: all 0.4s ease-in-out;
+	position: relative;
 	.caption{
 		display: none;
 	}
@@ -351,10 +357,14 @@ nav {
 		margin-bottom: 0!important;
 	}
 	&:after{
-		content: '→';
-		font-size: 30px;
-		display: flex;
-		justify-content: flex-end;
+		content: ' ';
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		background-image: url('./arrow.svg');
+		background-size: contain;
+		right: 0;
+		bottom: -35px;
 	}
 	&.toggle{
 		height: auto;
@@ -368,7 +378,9 @@ nav {
 			}
 		}
 		&:after {
-			content: '←';
+			-webkit-transform: scaleX(-1);
+			transform: scaleX(-1);
+			bottom: 0;
 		}
 		img {
 			object-fit: contain;

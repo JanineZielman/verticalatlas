@@ -42,7 +42,7 @@ export const Contribution = ({item}) => {
 			<div className="contribution" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}></div>
 				<div className="wrapper">
-					<h2 className={item.data.longtitle ? 'longtitle' : ''}>{item.data.title}</h2>
+					<h2 className={item.data.longtitle ? 'longtitle' : ''}>{item.data.title.toLowerCase()}</h2>
 					{item.data.cover_image.url &&
 						<div className="image">
 							<img src={item.data.cover_image.url}/>
