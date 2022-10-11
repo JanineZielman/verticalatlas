@@ -37,10 +37,12 @@
 	}
 	.selected{
 		.contribution{
-			width: 100vw;
+			width: 94vw;
+			// padding: 0;
 			margin: 0;
 			.wrapper{
 				margin: 0;
+				width: 80%;
 			}
 			.image{
 				img{
@@ -49,6 +51,8 @@
 			}
 		}
 		.content{
+			width: 94vw;
+			// padding: 0;
 			.text-wrapper{
 				width: 100%;
 			}
@@ -58,7 +62,6 @@
 			.text-template{
 				margin-left: 50px;
 			}
-			width: 100vw;
 		}
 	}
 	.endnotes{

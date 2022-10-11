@@ -57,6 +57,7 @@ export const Contribution = ({item}) => {
 				<div className='endnotes' id="endnotes">
 					<PrismicRichText field={item.data.endnotes}/>
 				</div>
+				<div className='close-bottom' onClick={RemoveClass}></div>
 			</div>
 		</div>
   );
