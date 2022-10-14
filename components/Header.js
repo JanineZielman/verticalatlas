@@ -33,24 +33,29 @@ export const Header = ({navigation, settings}) => {
     setIsOpen(false);
   }
 
-	function closeAfterClick(){
-		setTimeout(setIsOpen(false), 3000);
-	}
-
   useEffect(() => {
     window.addEventListener('scroll', scrollPlay)
 
-    return () => {
-      window.removeEventListener('scroll', scrollPlay);
-    };
+    const vid = document.getElementById('v0'); 
+    vid.pause(); 
+
+    scrollPos =  window.pageYOffset;
+
+
+    function scrollPlay(){  
+      var body = document.body;
+      var html = document.documentElement;
+
+      var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+      const vid = document.getElementById('v0'); 
+      var scrollIndex = (height - window.innerHeight) / vid.duration;
+      var frameNumber  = window.pageYOffset / scrollIndex * 1.2;
+      vid.currentTime  = frameNumber;
+    }
   }, []);
 
-  function scrollPlay(){  
-    const vid = document.getElementById('v0'); 
-    var frameNumber  = window.pageYOffset / 150;
-    vid.currentTime  = frameNumber;
-    window.requestAnimationFrame(scrollPlay);
-  }
+  
+
 
 
 
