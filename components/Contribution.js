@@ -33,7 +33,7 @@ export const Contribution = ({item}) => {
 		setTimeout(() => {
 			const id = selectedItems[0].id;
 			selectedItems?.[0].classList.remove("selected");
-			router.push('#'+id);
+			// router.push('#'+id);
 		}, 100);
   };
 

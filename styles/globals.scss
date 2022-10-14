@@ -67,13 +67,13 @@ body{
 }
 
 h2{
-	font-size: 48px;
+	font-size: 45px;
 	line-height: 1;
 	margin: 10px 0 20px 0;
 	font-weight: 100;
 	text-transform: capitalize;
 	&.longtitle{
-		font-size: 34px;
+		font-size: 30px;
 	}
 }
 
@@ -209,7 +209,7 @@ nav {
 	padding-bottom: 48px;
 	.contribution{
 		position: relative;
-		width: 300px;
+		width: 325px;
 		overflow: hidden;
 		cursor: pointer;
 		margin: 0 24px 48px 24px;
@@ -219,11 +219,17 @@ nav {
 		justify-content: space-between;
 		.wrapper{
 			height: 100%;
-			width: 300px;
+			width: 100%;
 			overflow: hidden;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			hyphens: auto;			
 		}
 		.image{
 			position: relative;
