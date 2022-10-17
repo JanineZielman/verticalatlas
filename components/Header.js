@@ -15,7 +15,7 @@ export const Header = ({navigation, settings}) => {
 			left: '-1px',
 			right: 'auto',
 			bottom: 'auto',
-			width: '600px',
+			width: '300px',
 			height: '100vh',
 			backgroundColor: '#FDFBDA',
 			zIndex: '999',
