@@ -22,6 +22,37 @@
           "allowTargetBlank": false,
           "single": "paragraph"
         }
+      },
+      "socials": {
+        "type": "Group",
+        "config": {
+          "label": "Socials",
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
       }
     }
   }

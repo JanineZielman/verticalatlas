@@ -14,16 +14,34 @@
     "name": [
       {
         "type": "heading1",
-        "text": "Primitive",
+        "text": "Silver",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Ex minim est aliqua enim eiusmod laborum sint et pariatur occaecat tempor in incididunt ut. In non ut sunt. Ullamco veniam mollit reprehenderit proident cillum et sit culpa quis commodo velit cillum.",
+        "text": "Culpa sunt ex in sint sunt consectetur est enim nostrud eiusmod dolor Lorem. Est consequat ut dolor minim esse anim ut officia culpa reprehenderit sint id ex cillum.",
         "spans": []
       }
-    ]
+    ],
+    "socials": [
+      {
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ],
+    "slices": []
   }
 }
