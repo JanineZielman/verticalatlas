@@ -121,12 +121,11 @@ nav {
 	padding-top: 80px;
 	div{
 		margin: 24px 0;
-		border-bottom: 2px solid black;
 	}
 	a {
 		text-decoration: none;
 		color: $black;
-		font-size: 36px;
+		font-size: 30px;
 		transition: opacity 0.3s ease-in-out;
 		&:hover{
 			opacity: 0.5;
@@ -158,7 +157,7 @@ nav {
 	z-index: 8;
 	cursor: pointer;
 	display: block;
-	margin: auto 10px auto auto;
+	margin: auto 24px auto auto;
 }
 
 .ReactModal__Overlay {
@@ -207,14 +206,16 @@ nav {
 	padding-top: 80px;
 	position: relative;
 	display: flex;
+	// justify-content: space-between;
 	flex-wrap: wrap;
 	padding-bottom: 48px;
 	.contribution{
 		position: relative;
-		width: 325px;
+		// width: 325px;
+		width: 22vw;
 		overflow: hidden;
 		cursor: pointer;
-		margin: 0 24px 48px 24px;
+		margin: 0 1.4vw 2vw 1.4vw;
 		height: 380px;
 		display: flex;
 		flex-direction: column;
@@ -269,10 +270,16 @@ nav {
 
 .selected {
 	margin-bottom: 48px;
+	.wrapper{
+		max-height: 100px;
+		.image{
+			display: none;
+		}
+	}
 	&.black-bg{
 		background-color: $black;
 		color: $white;
-		.close{
+		.close, .close-bottom{
 			background-color: $white;
 		}
 		.contribution{
@@ -301,17 +308,19 @@ nav {
 		padding: 1vw 3vw;
 		margin: 0;
 		background-color: $light-yellow;
+		height: auto;
 		.name{
 			width: 100%;
 		}
 		.wrapper{
 			margin-left: 200px;
+			width: 75%;
 		}
 		.close{
 			display: block;
 			position: absolute;
-			right: 3vw;
-			top: 24px;
+			right: 4vw;
+			top: 36px;
 			cursor: pointer;
 			font-weight: 100;
 			font-size: 38px;
@@ -476,14 +485,16 @@ nav {
 	.people-flex{
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	.person{
 		position: relative;
-		width: 600px;
+		width: 29vw;
 		max-width: 92vw;
 		overflow: hidden;
 		cursor: pointer;
-		margin: 0 48px 24px 0vw;
+		margin: 0 0vw 2vw 0vw;
+		min-height: 100px;
 		border-bottom: 3px solid $black;
 		transition: all 0.4s ease-in-out;
 		h2, p{
