@@ -149,21 +149,17 @@ nav {
 	cursor: pointer;
 }
 
-// .close-bottom {
-// 	width: 36px;
-// 	height: 36px;
-// 	mask-image: url('close.svg');
-// 	mask-size: contain;
-// 	mask-repeat: no-repeat;
-// 	background-color: $black;
-// 	z-index: 8;
-// 	cursor: pointer;
-// 	display: none;
-// 	margin: auto 24px auto auto;
-// }
-
-.close-bottom{
+.close-bottom {
+	width: 36px;
+	height: 36px;
+	mask-image: url('close.svg');
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	background-color: $black;
+	z-index: 8;
+	cursor: pointer;
 	display: none;
+	margin: auto 24px auto auto;
 }
 
 .ReactModal__Overlay {
@@ -429,6 +425,9 @@ nav {
 	p {
 		font-size: 16px;
 		margin: 0;
+		strong{
+			border-bottom: none!important;
+		}
 	}
 }
 
