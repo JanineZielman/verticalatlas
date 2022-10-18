@@ -11,8 +11,6 @@ export const Contribution = ({item}) => {
 	const [selectedItems, setSelectedItems] = useState([]);
 	const [selectedId, setSelectedId] = useState();
 
-	// console.log(selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src)
-
 	useEffect(() => {
     setSelectedItems(document.getElementsByClassName("selected"));
 		if(window.location.hash) {
@@ -42,11 +40,12 @@ export const Contribution = ({item}) => {
 
   return (
 		<>
-		{/* <Head>
-			<meta property="og:image" content={selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src} />
-			<meta name="description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
-			<meta property="og:description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
-		</Head> */}
+
+    <Head>
+      <meta property="og:image" content={selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src} />
+      <meta name="description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
+      <meta property="og:description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
+    </Head>
 		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
 			<div className="contribution" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}></div>
@@ -62,8 +61,11 @@ export const Contribution = ({item}) => {
 				</div>
 				<p className="name">{item.data.full_name}</p>
 				<div className="share">
-					<a href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverticalatlas.vercel.app${router.asPath}`} target="_blank" rel="noreferrer">
-							Share on facebook
+					<a href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverticalatlas.vercel.app%2F%23${router.asPath.replace('/#','')}`} target="_blank" rel="noreferrer">
+							Share on Facebook
+					</a>
+					<a href={`http://www.twitter.com/share?url=https%3A%2F%2Fverticalatlas.vercel.app%2F%23${router.asPath.replace('/#','')}`} target="_blank" rel="noreferrer">
+						Share on Twitter
 					</a>
 				</div>
 			</div>

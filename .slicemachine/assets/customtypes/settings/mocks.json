@@ -14,17 +14,26 @@
     "name": [
       {
         "type": "heading1",
-        "text": "Silver",
+        "text": "Rough",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Culpa sunt ex in sint sunt consectetur est enim nostrud eiusmod dolor Lorem. Est consequat ut dolor minim esse anim ut officia culpa reprehenderit sint id ex cillum.",
+        "text": "Sunt laboris dolore in tempor labore cupidatat aute eu. Laboris eu eiusmod quis nisi nulla reprehenderit enim magna id reprehenderit. Anim aliqua elit proident laborum eiusmod aliquip elit magna id amet ut voluptate nostrud.",
         "spans": []
       }
     ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+    },
     "socials": [
       {
         "icon": {
@@ -34,11 +43,11 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
         },
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "http://google.com"
         }
       }
     ],
