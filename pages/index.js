@@ -18,6 +18,7 @@ const Index = ({ contributions, navigation, settings }) => {
     >
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
+        <meta property="og:image" content={settings.data.image.url} />
         <meta name="description" content={prismicH.asText(settings.data.description)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={prismicH.asText(settings.data.name)} />
