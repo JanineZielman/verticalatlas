@@ -15,6 +15,10 @@ const Page = ({ page, navigation, settings }) => {
           {page.data.title} |{" "}
           {prismicH.asText(settings.data.name)}
         </title>
+        <meta name="description" content={prismicH.asText(settings.data.description)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={prismicH.asText(settings.data.name)} />
+        <meta property="og:description" content={prismicH.asText(settings.data.description)} />
       </Head>
       <div className="page">
         <div className="container">
