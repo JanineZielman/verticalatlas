@@ -40,7 +40,6 @@ export const Contribution = ({item}) => {
 
   return (
 		<>
-
     <Head>
       <meta property="og:image" content={selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src} />
       <meta name="description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />

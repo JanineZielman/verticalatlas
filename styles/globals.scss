@@ -760,6 +760,11 @@ nav {
 }
 
 .share{
+	display: none;
+}
+
+.selected .share{
+	display: block;
 	margin-top: 5px;
 	margin-bottom: -5px;
 	a{
