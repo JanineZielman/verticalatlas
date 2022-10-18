@@ -41,11 +41,15 @@ export const Contribution = ({item}) => {
 		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
 			<div className="contribution" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}></div>
-				<div className="wrapper">
+				<div className={`wrapper ${item.data.cover_image.url ? 'image-wrapper' : 'text-wrapper'}`}>
 					<h2 className={item.data.longtitle ? 'longtitle' : ''}>{item.data.title.toLowerCase()}</h2>
-					{item.data.cover_image.url &&
+					{item.data.cover_image.url ?
 						<div className="image">
 							<img src={item.data.cover_image.url}/>
+						</div>
+					:
+						<div className="cross">
+							<img src="/close.svg"/>
 						</div>
 					}
 				</div>
