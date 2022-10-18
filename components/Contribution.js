@@ -61,12 +61,14 @@ export const Contribution = ({item}) => {
 					}
 				</div>
 				<p className="name">{item.data.full_name}</p>
+				<div className="share">
+					<a href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverticalatlas.vercel.app${router.asPath}`} target="_blank" rel="noreferrer">
+							Share on facebook
+					</a>
+				</div>
 			</div>
 
 			<div className="content">
-				<a href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverticalatlas.vercel.app${router.asPath}`} target="_blank" rel="noopener">
-						Share on facebook
-				</a>
 				<SliceZone slices={item.data.slices} components={components} />
 				<div className='endnotes' id="endnotes">
 					<PrismicRichText field={item.data.endnotes}/>
