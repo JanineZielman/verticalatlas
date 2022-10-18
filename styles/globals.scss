@@ -358,11 +358,11 @@ nav {
 		// position: relative;
 		.text-template{
 			margin-left: 200px;
-			p strong{
-				border-bottom: 1px solid $black;
-				margin-left: 48px;
-				font-weight: 300;
-			}
+			// p strong{
+			// 	border-bottom: 1px solid $black;
+			// 	margin-left: 48px;
+			// 	font-weight: 300;
+			// }
 		}
 		.image-template{
 			display: flex;
@@ -485,8 +485,8 @@ nav {
 	vertical-align: super;
 	font-size: 14px;
 	font-weight: 300;
-	text-decoration: underline;
-	border-bottom: none!important;
+	// text-decoration: underline;
+	// border-bottom: none!important;
 	margin-left: 5px!important;
 	margin-right: 5px!important;
 	cursor: pointer;
@@ -757,4 +757,5 @@ nav {
 	bottom: 1vw;
 	background-color: $yellow;
 	background-repeat: no-repeat;
+	border-radius: 50%;
 }
