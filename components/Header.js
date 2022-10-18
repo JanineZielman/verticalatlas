@@ -84,7 +84,7 @@ export const Header = ({navigation, settings}) => {
           ))}
           <div className="socials">
             {settings.data.socials.map((social, i) => (
-              <a href={social.link.url} target="_blank" key={`social${i}`}>
+              <a href={social.link.url} target="_blank" rel="noreferrer" key={`social${i}`}>
                 <img src={social.icon.url}/>
               </a>
             ))}
