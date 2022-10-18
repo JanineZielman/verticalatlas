@@ -12,7 +12,8 @@ export const Layout = ({
         navigation={navigation}
         settings={settings}
       />
-      <main>{children}</main>
+      <main id="top">{children}</main>
+      <a href="#top" className="arrow-top"></a>
       <Footer settings={settings} />
     </div>
   );
