@@ -15,7 +15,8 @@ const TextTemplate = ({ slice }) => {
 			id = window.location.hash.replace('#','');
 		} 
     boldText.forEach(function(element, index) {       
-      const number = element.innerHTML.match(/\b([0-9]|[1-9][0-9])\b/)?.[0];
+      // const number = element.innerHTML.match(/\b([0-9]|[1-9][0-9])\b/)?.[0];
+      const number = element.innerHTML.match(/\d/g)?.[0];
       if (number) {
         element.classList.add('footnote')
         element.onclick = function() { 
@@ -27,7 +28,7 @@ const TextTemplate = ({ slice }) => {
         };
       }
     })
-  }, [])
+  })
 
 
 
