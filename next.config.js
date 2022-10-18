@@ -4,7 +4,7 @@ const nextConfig = {
   redirects() {
     return [
       {
-        source: '/',
+        source: 'verticalatlas.vercel.app',
         destination: '/about',
         permanent: true,
       },
