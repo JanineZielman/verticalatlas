@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1600px) {
 	.people {
 		.person {
-			width: 44vw;
+			width: 30vw;
 		}
 	}
 
@@ -83,6 +83,9 @@
 	p{
 		font-size: 18px;
 	}
+	.header{
+		height: 100px;
+	}
 	.contributions{
 		width: 100vw;
 		justify-content: flex-start;
@@ -90,6 +93,8 @@
 			width: 45vw;
 			margin: 2.5vw;
 			height: 280px;
+			position: relative;
+			padding-top: 0;
 			.name{
 				border-width: 2px;
 			}
@@ -123,6 +128,12 @@
 			// padding: 0;
 			.text-wrapper{
 				width: 100%;
+			}
+			.image-template {
+				.text-wrapper{
+					position: relative;
+					top: 0;
+				}
 			}
 			.quote{
 				border-width: 2px;
@@ -184,4 +195,7 @@
 				animation-duration: 10s;
 			}
 		}
+	.close-bottom{
+		display: block;
+	}
 }
