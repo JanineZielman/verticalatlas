@@ -1,4 +1,23 @@
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1600px) {
+	.people {
+		.person {
+			width: 44vw;
+		}
+	}
+
+	.contributions {
+		.contribution {
+			width: 17.2vw;
+		}
+		.selected {
+			.contribution {
+				width: 96vw;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1500px) {
 	.people {
 		.person {
 			width: 44vw;
@@ -32,6 +51,15 @@
 			width: 46.5vw;
 		}
 		.selected {
+			.content{
+				.image-template {
+					flex-direction: column;
+					.images {
+						width: 96%;
+						margin-left: 0;
+					}
+				}
+			}
 			.contribution {
 				width: 96vw;
 				.wrapper {
@@ -41,6 +69,8 @@
 			}
 		}
 	}
+
+	
 }
 
 @media only screen and (max-width: 600px) {
