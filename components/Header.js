@@ -15,7 +15,7 @@ export const Header = ({navigation, settings}) => {
 			left: '-1px',
 			right: 'auto',
 			bottom: 'auto',
-			width: '300px',
+			width: '250px',
 			height: '100vh',
 			backgroundColor: '#FDFBDA',
 			zIndex: '999',
@@ -75,13 +75,20 @@ export const Header = ({navigation, settings}) => {
               <PrismicText field={navigation.data.homepageLabel} />
             </PrismicLink>
           </div>
-          {navigation.data?.links.map((item) => (
-            <div key={item}>
+          {navigation.data?.links.map((item, i) => (
+            <div key={`link${i}`}>
               <PrismicLink field={item.link}>
                 <PrismicText field={item.label} />
               </PrismicLink>
             </div>
           ))}
+          <div className="socials">
+            {settings.data.socials.map((social, i) => (
+              <a href={social.link.url} target="_blank" key={`social${i}`}>
+                <img src={social.icon.url}/>
+              </a>
+            ))}
+          </div>
         </nav>
       </Modal>
       <div className="scroll-bound">
