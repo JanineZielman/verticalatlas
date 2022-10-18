@@ -40,11 +40,6 @@ export const Contribution = ({item}) => {
 
   return (
 		<>
-    <Head>
-      <meta property="og:image" content={selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src} />
-      <meta name="description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
-      <meta property="og:description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
-    </Head>
 		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
 			<div className="contribution" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}></div>
