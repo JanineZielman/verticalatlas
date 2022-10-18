@@ -368,7 +368,7 @@ nav {
 			// display: block;
 			.text-wrapper{
 				position: sticky;
-				top: 200px;
+				top: 260px;
 				align-self: flex-start;
 			}
 			.images{
@@ -760,8 +760,7 @@ nav {
 }
 
 .share{
-	left: 3vw;
-	bottom: 0;
-	top: auto;
-	position: absolute;
+	margin-top: 5px;
+	margin-bottom: -5px;
+	// position: absolute;
 }
