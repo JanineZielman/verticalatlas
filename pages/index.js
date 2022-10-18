@@ -10,6 +10,7 @@ import { Hero } from "../components/Hero";
 
 
 const Index = ({ contributions, navigation, settings }) => {
+  console.log(settings)
   return (
     <Layout
       navigation={navigation}
@@ -17,6 +18,10 @@ const Index = ({ contributions, navigation, settings }) => {
     >
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
+        <meta name="description" content={prismicH.asText(settings.data.description)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={prismicH.asText(settings.data.name)} />
+        <meta property="og:description" content={prismicH.asText(settings.data.description)} />
       </Head>
       <Hero/>
       <div className="contributions">

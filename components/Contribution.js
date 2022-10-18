@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import { SliceZone } from "@prismicio/react";
@@ -9,6 +10,8 @@ export const Contribution = ({item}) => {
 
 	const [selectedItems, setSelectedItems] = useState([]);
 	const [selectedId, setSelectedId] = useState();
+
+	// console.log(selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src)
 
 	useEffect(() => {
     setSelectedItems(document.getElementsByClassName("selected"));
@@ -38,6 +41,12 @@ export const Contribution = ({item}) => {
   };
 
   return (
+		<>
+		<Head>
+			<meta property="og:image" content={selectedItems[0]?.children[0]?.children[1]?.children[1]?.children[0]?.src} />
+			<meta name="description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
+			<meta property="og:description" content={`${selectedItems[0]?.children[0].children[1].children[0].innerHTML} | ${selectedItems[0]?.children[0].children[2].innerHTML}`} />
+		</Head>
 		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
 			<div className="contribution" onClick={AddClass}>
 				<div className='close' onClick={RemoveClass}></div>
@@ -48,12 +57,15 @@ export const Contribution = ({item}) => {
 							<img src={item.data.cover_image.url}/>
 						</div>
 					:
-						<div className="cross">
-							<img src="/close.svg"/>
-						</div>
+						<div className="cross"></div>
 					}
 				</div>
 				<p className="name">{item.data.full_name}</p>
+				<div className="share">
+					<a href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverticalatlas.vercel.app${router.asPath}`} target="_blank" rel="noreferrer">
+							Share on facebook
+					</a>
+				</div>
 			</div>
 
 			<div className="content">
@@ -64,5 +76,6 @@ export const Contribution = ({item}) => {
 				<div className='close-bottom' onClick={RemoveClass}></div>
 			</div>
 		</div>
+		</>
   );
 };

@@ -15,6 +15,10 @@ const Index = ({ page, people, navigation, settings }) => {
     >
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
+        <meta name="description" content={prismicH.asText(settings.data.description)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={prismicH.asText(settings.data.name)} />
+        <meta property="og:description" content={prismicH.asText(settings.data.description)} />
       </Head>
       <div className="people">
 				<h1>{page.data.title}</h1>
