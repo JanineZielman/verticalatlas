@@ -77,11 +77,18 @@ export const Header = ({navigation, settings}) => {
           </div>
           {navigation.data?.links.map((item, i) => (
             <div key={`link${i}`}>
-              <PrismicLink field={item.link}>
+              <a href={item.link.uid}>
                 <PrismicText field={item.label} />
-              </PrismicLink>
+              </a>
             </div>
           ))}
+          <div className="extra-links">
+            {settings.data.links.map((item, i) => (
+              <a href={item.link.uid} key={`link${i}`}>
+                {item.label}
+              </a>
+            ))}
+          </div>
           <div className="socials">
             {settings.data.socials.map((social, i) => (
               <a href={social.link.url} target="_blank" rel="noreferrer" key={`social${i}`}>

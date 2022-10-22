@@ -10,7 +10,6 @@ import { Hero } from "../components/Hero";
 
 
 const Index = ({ contributions, navigation, settings }) => {
-  console.log(settings)
   return (
     <Layout
       navigation={navigation}

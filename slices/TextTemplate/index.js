@@ -17,15 +17,29 @@ const TextTemplate = ({ slice }) => {
     boldText.forEach(function(element, index) {       
       // const number = element.innerHTML.match(/\b([0-9]|[1-9][0-9])\b/)?.[0];
       const number = element.innerHTML.match(/\d/g)?.[0];
+      const numberDot = element.innerHTML.match(/^[0-9]*\./)
+      const chinese = element.innerHTML.match(/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff66-\uff9f]/);
       if (number) {
-        element.classList.add('footnote')
-        element.onclick = function() { 
-          window.scrollTo({
-            top: document.getElementById(id).clientHeight + document.getElementById(id).offsetTop - window.innerHeight,
-            left: 0,
-            behavior: 'smooth'
-          });
-        };
+        if(!chinese){
+          if(!numberDot){
+            element.classList.add('footnote')
+            element.onclick = function() { 
+              window.scrollTo({
+                top: document.getElementById(id).clientHeight + document.getElementById(id).offsetTop - window.innerHeight,
+                left: 0,
+                behavior: 'smooth'
+              });
+            };
+          }
+        }
+      } else {
+        if(!chinese){
+          element.classList.add('subtitle');
+        }
+        
+      }
+      if(numberDot){
+        element.classList.add('subtitle');
       }
     })
   })
