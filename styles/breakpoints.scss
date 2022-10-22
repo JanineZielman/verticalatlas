@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1800px) {
 	.people {
 		.person {
 			width: 30vw;
@@ -74,6 +74,16 @@
 		}
 	}
 
+		.logo-section {
+	
+			.logos {	
+				.logo {
+					width: 49%;
+					margin-right: 1%;
+					margin-bottom: 1%;
+				}
+			}
+		}
 	
 }
 
@@ -89,6 +99,9 @@
 	}
 	.header{
 		height: 100px;
+	}
+	.no-name {
+		border-width: 2px;
 	}
 	.contributions{
 		width: 100vw;

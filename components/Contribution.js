@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { SliceZone } from "@prismicio/react";
 import { components } from "../slices";
 import { PrismicRichText } from '@prismicio/react'
+import { PrismicNextImage } from "@prismicio/next";
 
 export const Contribution = ({item}) => {
 	const router = useRouter();
@@ -38,6 +39,8 @@ export const Contribution = ({item}) => {
 		}, 100);
   };
 
+	console.log(item)
+
   return (
 		<>
 		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>
@@ -47,13 +50,15 @@ export const Contribution = ({item}) => {
 					<h2 className={item.data.longtitle ? 'longtitle' : ''}>{item.data.title.toLowerCase()}</h2>
 					{item.data.cover_image.url ?
 						<div className="image">
-							<img src={item.data.cover_image.url}/>
+							<PrismicNextImage 
+								field={item.data.cover_image}
+							/>
 						</div>
 					:
 						<div className="cross"></div>
 					}
 				</div>
-				<p className="name">{item.data.full_name}</p>
+				{item.data.full_name ? <p className="name">{item.data.full_name}</p> : <div className="no-name"></div>}
 				<div className="share">
 					<a href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fverticalatlas.vercel.app%2F%23${router.asPath.replace('/#','')}`} target="_blank" rel="noreferrer">
 							Share on Facebook
