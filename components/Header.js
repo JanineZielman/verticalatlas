@@ -71,9 +71,9 @@ export const Header = ({navigation, settings}) => {
         <nav>
           <div className="close" onClick={closeModal}></div>
           <div>
-            <a href="/">
+            <PrismicLink href="/">
               <PrismicText field={navigation.data.homepageLabel} />
-            </a>
+            </PrismicLink>
           </div>
           {navigation.data?.links.map((item, i) => (
             <div key={`link${i}`}>
