@@ -33,14 +33,15 @@ export const Header = ({navigation, settings}) => {
 
   useEffect(() => {
     setTimeout(() => {
-      window?.addEventListener('scroll', scrollPlay)    
-      function scrollPlay(){  
-        var body = document.body;
-        var html = document.documentElement;
+      const vid = document.getElementById('v0'); 
+      if (vid) {
+        window?.addEventListener('scroll', scrollPlay)    
+        function scrollPlay(){  
+          var body = document.body;
+          var html = document.documentElement;
 
-        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-        const vid = document.getElementById('v0'); 
-        if (vid) {
+          var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+          const vid = document.getElementById('v0'); 
           var scrollIndex = (height - window.innerHeight) / vid.duration;
           var frameNumber  = window.pageYOffset / scrollIndex * 1.2;
           vid.currentTime  = frameNumber;
