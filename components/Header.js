@@ -34,24 +34,26 @@ export const Header = ({navigation, settings}) => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollPlay)
+    setTimeout(() => {
+      window.addEventListener('scroll', scrollPlay)
 
-    const vid = document.getElementById('v0'); 
-    vid.pause(); 
-
-    scrollPos =  window.pageYOffset;
-
-    
-    function scrollPlay(){  
-      var body = document.body;
-      var html = document.documentElement;
-
-      var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
       const vid = document.getElementById('v0'); 
-      // var scrollIndex = (height - window.innerHeight) / vid.duration;
-      // var frameNumber  = window.pageYOffset / scrollIndex * 1.2;
-      // vid.currentTime  = frameNumber;
-    }
+      vid.pause(); 
+
+      scrollPos =  window.pageYOffset;
+
+      
+      function scrollPlay(){  
+        var body = document.body;
+        var html = document.documentElement;
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        const vid = document.getElementById('v0'); 
+        var scrollIndex = (height - window.innerHeight) / vid.duration;
+        var frameNumber  = window.pageYOffset / scrollIndex * 1.2;
+        vid.currentTime  = frameNumber;
+      }
+    }, 1000);
   }, []);
 
   
@@ -101,7 +103,7 @@ export const Header = ({navigation, settings}) => {
       <div className="scroll-bound">
         <div className="scroll-wrapper">
           <p>Vertical Atlas</p>
-          <video id="v0" width="600" height="100" muted autoPlay>
+          <video id="v0" width="600" height="100" muted>
             <source src="/scroll.mp4" type="video/mp4"/>
           </video>
         </div>
