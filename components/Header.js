@@ -32,22 +32,23 @@ export const Header = ({navigation, settings}) => {
   }
 
   useEffect(() => {
-    window?.addEventListener('scroll', scrollPlay)
+    setTimeout(() => {
+      window?.addEventListener('scroll', scrollPlay)    
+      function scrollPlay(){  
+        var body = document.body;
+        var html = document.documentElement;
 
-    // const vid = document.getElementById('v0'); 
-    // vid.pause(); 
-    
-    function scrollPlay(){  
-      var body = document.body;
-      var html = document.documentElement;
-
-      var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-      const vid = document.getElementById('v0'); 
-      var scrollIndex = (height - window.innerHeight) / vid.duration;
-      var frameNumber  = window.pageYOffset / scrollIndex * 1.2;
-      vid.currentTime  = frameNumber;
-    }
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        const vid = document.getElementById('v0'); 
+        var scrollIndex = (height - window.innerHeight) / vid.duration;
+        var frameNumber  = window.pageYOffset / scrollIndex * 1.2;
+        if (vid) {
+          vid.currentTime  = frameNumber;
+        }
+      }
+    }, 4000);
   }, []);
+
 
   
 
