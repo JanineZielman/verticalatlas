@@ -220,6 +220,11 @@
 		}
 	.close-bottom{
 		display: block;
+		width: 30px;
+		height: 30px;
+	}
+	.selected .contribution .close{
+		bottom: 30px;
 	}
 	.arrow-top {
 		bottom: 0;
