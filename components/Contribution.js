@@ -39,8 +39,6 @@ export const Contribution = ({item}) => {
 		}, 100);
   };
 
-	console.log(item)
-
   return (
 		<>
 		<div className={`contribution-wrapper ${item.data.black_background ? 'black-bg' : ''}`} id={item.uid}>

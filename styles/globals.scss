@@ -53,6 +53,7 @@ $white: white;
 
 body, html{
 	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
 	// scroll-padding-top: 100px;
 }
 
@@ -642,7 +643,7 @@ nav {
 		animation: moving 6s linear 0s 2 alternate;
 	}
 	.scroll2 {
-		right: 42vw;
+		right: 44vw;
 		top: 0;
 		transform: rotate(-90deg) translate(0, 0%);
 		animation: moving2 10s linear 0s 2 alternate;
@@ -653,7 +654,7 @@ nav {
 		animation: moving3 6s linear 0s 2 alternate;
 	}
 	.scroll4 {
-		right: 57vw;
+		right: 58vw;
 		top: 0;
 		animation: moving4 6s linear 0s 2 alternate;
 	}
@@ -675,13 +676,14 @@ nav {
 	}
 
 	to {
-		margin-top: 200vh;
+		margin-top: 100vh;
 	}
 }
 
+
 @keyframes moving2 {
 	from {
-		margin-top: 200vh;
+		margin-top: 100vh;
 	}
 
 	to {
@@ -705,7 +707,7 @@ nav {
 	}
 
 	to {
-		margin-top: -150vh;
+		margin-top: -50vh;
 	}
 }
 
